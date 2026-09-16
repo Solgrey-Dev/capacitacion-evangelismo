@@ -1,0 +1,880 @@
+
+/* =========================
+    CONFIGURACIÓN GENERAL
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f6f8;
+    color: #242424;
+    line-height: 1.8;
+}
+
+
+/* =========================
+    HERO
+========================= */
+
+.hero {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171717 0%,
+            #292929 55%,
+            #3c3c3c 100%
+        );
+
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    color: #d7b56d;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-weight: 700;
+}
+
+.hero p {
+    max-width: 620px;
+    margin: 0 auto 30px;
+
+    color: #dddddd;
+    font-size: 18px;
+}
+
+
+/* =========================
+    BOTÓN PRINCIPAL
+========================= */
+
+.btn-primary {
+    border: none;
+    background-color: #d7b56d;
+    color: #171717;
+
+    font-weight: bold;
+    padding: 12px 28px;
+}
+
+.btn-primary:hover {
+    background-color: #c7a35d;
+    color: #171717;
+}
+
+
+/* =========================
+    NAVEGACIÓN
+========================= */
+
+.navbar-estudio {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px 20px;
+
+    background-color: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #dddddd;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-estudio a {
+    padding: 7px 14px;
+
+    color: #333;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 20px;
+
+    transition: 0.2s ease;
+}
+
+.navbar-estudio a:hover {
+    background-color: #eeeeee;
+}
+
+.navbar-estudio a.activo {
+    background-color: #d7b56d;
+    color: #171717;
+}
+
+
+/* =========================
+    VISTAS
+========================= */
+
+.vista {
+    display: none;
+}
+
+.vista.activa {
+    display: block;
+}
+
+
+/* =========================
+    SELECTOR DE LECCIONES (INICIO)
+========================= */
+
+.lesson-picker {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    margin: 10px 0 40px;
+}
+
+.lesson-pick-card {
+    display: block;
+    width: 100%;
+    padding: 28px;
+
+    background-color: white;
+    color: inherit;
+    text-align: left;
+
+    border: 1px solid #e3e3e3;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.lesson-pick-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+.lesson-pick-card h3 {
+    margin: 6px 0 8px;
+    font-size: 1.2rem;
+}
+
+.lesson-pick-card p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+}
+
+
+/* =========================
+    VISTA CONTENIDO
+========================= */
+
+.contenido-header {
+    margin-bottom: 30px;
+}
+
+.contenido-header h1 {
+    margin: 8px 0 10px;
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+}
+
+.contenido-header p {
+    margin: 0;
+    color: #555;
+}
+
+
+/* =========================
+    ACORDEÓN DE LECCIONES
+========================= */
+
+.acordeon-lecciones {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    margin-bottom: 30px;
+}
+
+.leccion-item {
+    background-color: white;
+
+    border: 1px solid #e3e3e3;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.leccion-toggle {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 22px 26px;
+
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.leccion-numero {
+    color: #a17c32;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.leccion-titulo {
+    flex: 1;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.leccion-flecha {
+    color: #999;
+    transition: transform 0.25s ease;
+}
+
+.leccion-item.abierta .leccion-flecha {
+    transform: rotate(180deg);
+}
+
+.leccion-body {
+    display: none;
+    padding: 0 26px 30px;
+}
+
+.leccion-item.abierta .leccion-body {
+    display: block;
+    animation: aparecer 0.25s ease;
+}
+
+.leccion-subtitulo {
+    margin: 30px 0 18px;
+
+    color: #171717;
+
+    font-size: 1.05rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.leccion-body .study-card:first-of-type {
+    margin-top: 0;
+}
+
+.flashcard-deck-titulo {
+    display: block;
+    margin-bottom: 4px;
+
+    color: #a17c32;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/* =========================
+    CONTENEDOR
+========================= */
+
+.estudio-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+
+/* =========================
+    SECCIONES
+========================= */
+
+.seccion {
+    padding: 70px 0 20px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 28px;
+}
+
+.section-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    background-color: #222;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.section-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #a17c32;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-header h2 {
+    margin: 0;
+
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+    font-weight: 700;
+}
+
+
+/* =========================
+    TARJETAS DE ESTUDIO
+========================= */
+
+.study-card {
+    margin-bottom: 24px;
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid #e3e3e3;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.study-card h3 {
+    margin-bottom: 22px;
+
+    font-size: 1.35rem;
+}
+
+.study-card p {
+    margin-bottom: 20px;
+}
+
+.study-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+    FRASES
+========================= */
+
+.quote-list {
+    margin: 25px 0;
+    padding-left: 20px;
+
+    border-left: 3px solid #d7b56d;
+}
+
+.quote-list p {
+    margin-bottom: 8px;
+
+    font-style: italic;
+}
+
+
+/* =========================
+    VERSÍCULO DESTACADO
+========================= */
+
+.verse-highlight {
+    margin: 28px 0;
+    padding: 24px;
+
+    background-color: #f7f1e5;
+
+    border-left: 4px solid #b8944e;
+    border-radius: 8px;
+}
+
+.verse-highlight span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #856621;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.verse-highlight p {
+    margin: 0;
+
+    font-style: italic;
+}
+
+
+/* =========================
+    TARJETAS DE VERSÍCULOS
+========================= */
+
+.versiculos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.verse-card {
+    padding: 26px;
+
+    background-color: #222;
+    color: white;
+
+    border-radius: 16px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.verse-reference {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: #d7b56d;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.verse-card p {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+    REPASO
+========================= */
+
+.repaso-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.question-card {
+    padding: 26px;
+
+    background-color: white;
+
+    border: 1px solid #e3e3e3;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+}
+
+.question-number {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #a17c32;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.question-card h3 {
+    margin-bottom: 20px;
+
+    font-size: 1.25rem;
+}
+
+
+/* =========================
+    RESPUESTAS
+========================= */
+
+.respuesta {
+    display: none;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    background-color: #f5f6f8;
+
+    border-radius: 10px;
+
+    animation: aparecer 0.25s ease;
+}
+
+.respuesta.visible {
+    display: block;
+}
+
+.respuesta p {
+    margin: 0;
+}
+
+
+/* =========================
+    TARJETA FINAL
+========================= */
+
+.final-card {
+    border-top: 4px solid #d7b56d;
+}
+
+
+/* =========================
+    BOTÓN ARRIBA
+========================= */
+
+.btn-arriba {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #222;
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 0.2s ease;
+}
+
+.btn-arriba.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* =========================
+    ANIMACIÓN
+========================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+    FLASHCARDS
+========================= */
+
+.flashcard-deck {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.flashcard-progress {
+    margin-bottom: 18px;
+
+    color: #666;
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.flashcard {
+    margin-bottom: 24px;
+
+    perspective: 1500px;
+
+    cursor: pointer;
+}
+
+.flashcard-inner {
+    position: relative;
+    min-height: 260px;
+
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.flashcard-inner.volteada {
+    transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid #e3e3e3;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    backface-visibility: hidden;
+}
+
+.flashcard-back {
+    background-color: #222;
+    color: white;
+
+    transform: rotateY(180deg);
+}
+
+.flashcard-label {
+    color: #a17c32;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.flashcard-back .flashcard-label {
+    color: #d7b56d;
+}
+
+.flashcard-front p,
+.flashcard-back p {
+    margin: 0;
+
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.flashcard-hint {
+    color: #999;
+    font-size: 12px;
+}
+
+.flashcard-back .flashcard-hint {
+    color: #bbb;
+}
+
+.flashcard-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+    RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 360px;
+        padding: 45px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .navbar-estudio {
+        overflow-x: auto;
+        justify-content: flex-start;
+
+        white-space: nowrap;
+    }
+
+    .navbar-estudio a {
+        flex-shrink: 0;
+    }
+
+    .estudio-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .seccion {
+        padding-top: 55px;
+    }
+
+    .section-header {
+        align-items: flex-start;
+    }
+
+    .section-number {
+        min-width: 44px;
+        height: 44px;
+    }
+
+    .study-card {
+        padding: 22px;
+        border-radius: 12px;
+    }
+
+    .versiculos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .verse-card {
+        padding: 22px;
+    }
+
+    .question-card {
+        padding: 22px;
+    }
+
+    .question-card .btn {
+        width: 100%;
+    }
+
+    .flashcard-inner {
+        min-height: 300px;
+    }
+
+    .flashcard-front,
+    .flashcard-back {
+        padding: 22px;
+    }
+
+    .lesson-picker {
+        grid-template-columns: 1fr;
+    }
+
+    .leccion-toggle {
+        padding: 18px 20px;
+    }
+
+    .leccion-body {
+        padding: 0 20px 24px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-number {
+        min-width: 40px;
+        height: 40px;
+
+        font-size: 12px;
+    }
+
+    .study-card {
+        padding: 20px;
+    }
+
+    .verse-highlight {
+        padding: 18px;
+    }
+
+    .btn-arriba {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .flashcard-inner {
+        min-height: 320px;
+    }
+
+    .flashcard-front p,
+    .flashcard-back p {
+        font-size: 1.05rem;
+    }
+
+    .leccion-toggle {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .leccion-titulo {
+        flex-basis: 100%;
+        order: 3;
+    }
+}

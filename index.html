@@ -1,0 +1,983 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Capacitación de Evangelismo</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <!-- =========================
+        NAVEGACIÓN
+    ========================== -->
+
+    <nav class="navbar-estudio">
+        <a href="#" class="nav-link activo" data-vista="inicio" onclick="mostrarVista('inicio'); return false;">Inicio</a>
+        <a href="#" class="nav-link" data-vista="contenido" onclick="mostrarVista('contenido'); return false;">Contenido</a>
+    </nav>
+
+
+    <!-- =========================
+        VISTA: INICIO
+    ========================== -->
+
+    <div id="vista-inicio" class="vista activa">
+
+        <header class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">CAPACITACIÓN</span>
+
+                <h1>Capacitación de evangelismo</h1>
+
+                <p>
+                    Una guía para estudiar, repasar y comprender
+                    la importancia de la Palabra de Dios.
+                </p>
+
+                <a class="btn btn-primary btn-lg" href="#" onclick="mostrarVista('contenido'); return false;">
+                    Comenzar
+                </a>
+            </div>
+        </header>
+
+
+        <main class="container estudio-container">
+
+            <section class="seccion">
+
+                <div class="section-header">
+                    <span class="section-number">·</span>
+
+                    <div>
+                        <span class="section-label">LECCIONES</span>
+                        <h2>Elige una lección para repasar</h2>
+                    </div>
+                </div>
+
+                <div class="lesson-picker">
+
+                    <button class="lesson-pick-card" onclick="irALeccion(1)">
+                        <span class="section-label">LECCIÓN 01</span>
+                        <h3>La importancia de la Palabra</h3>
+                        <p>¿Cuánto conoces realmente a Dios? La Palabra como camino para conocerlo.</p>
+                    </button>
+
+                    <button class="lesson-pick-card" onclick="irALeccion(2)">
+                        <span class="section-label">LECCIÓN 02</span>
+                        <h3>El corazón de Dios</h3>
+                        <p>La condición del ser humano y la verdadera voluntad de Dios.</p>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+        VISTA: CONTENIDO
+    ========================== -->
+
+    <div id="vista-contenido" class="vista">
+
+        <main class="container estudio-container">
+
+            <section class="seccion">
+
+                <div class="contenido-header">
+                    <span class="section-label">CONTENIDO</span>
+                    <h1>Contenido del curso</h1>
+                    <p>
+                        Selecciona una lección para ver su estudio completo
+                        y su propio set de flashcards de repaso.
+                    </p>
+                </div>
+
+
+                <div class="acordeon-lecciones">
+
+                    <!-- =========================
+                        LECCIÓN 1
+                    ========================== -->
+
+                    <div class="leccion-item" id="leccion-item-1">
+
+                        <button class="leccion-toggle" onclick="toggleLeccion(1)">
+                            <span class="leccion-numero">Lección 01</span>
+                            <span class="leccion-titulo">La importancia de la Palabra</span>
+                            <span class="leccion-flecha">▾</span>
+                        </button>
+
+                        <div class="leccion-body" id="leccion-body-1">
+
+                            <h3 class="leccion-subtitulo">¿Cuánto conoces realmente a Dios?</h3>
+
+                            <article class="study-card">
+
+                                <p>
+                                    Probablemente la mayoría diría:
+                                </p>
+
+                                <div class="quote-list">
+                                    <p>"Creo en Dios",</p>
+                                    <p>"He sentido a Dios",</p>
+                                    <p>"He experimentado la gracia de Dios".</p>
+                                </div>
+
+                                <p>
+                                    Yo también era así.
+                                    A través de muchas experiencias espirituales,
+                                    pensaba que conocía bien a Dios.
+                                </p>
+
+                                <p>
+                                    Pero en un momento me di cuenta de algo.
+                                    Había tenido experiencias,
+                                    pero en realidad no conocía plenamente
+                                    la voluntad ni el corazón de Dios.
+                                </p>
+
+                            </article>
+
+
+                            <h3 class="leccion-subtitulo">Conocer a Dios</h3>
+
+                            <article class="study-card">
+
+                                <h3>¿Cómo podemos conocer a Dios?</h3>
+
+                                <p>
+                                    La Biblia dice
+                                    que la Palabra es Dios.
+                                </p>
+
+                                <p>
+                                    ¿Por qué?
+                                    Porque la voluntad de Dios,
+                                    su corazón
+                                    y el propósito que desea cumplir
+                                    están contenidos en la Palabra.
+                                </p>
+
+                                <p>
+                                    Piénsalo.
+                                    En el mundo también existen autobiografías.
+                                    Aunque no puedas conocer personalmente a una persona,
+                                    si lees su autobiografía,
+                                    puedes conocer su vida,
+                                    sus pensamientos,
+                                    sus valores
+                                    y sus propósitos.
+                                </p>
+
+                                <p>
+                                    Entonces,
+                                    ¿qué ocurre con Dios?
+                                    Dios es Espíritu,
+                                    por lo que no podemos verlo con nuestros ojos.
+                                    Por eso Dios nos dio Su Palabra,
+                                    para que pudiéramos conocerlo.
+                                </p>
+
+                            </article>
+
+
+                            <article class="study-card">
+
+                                <h3>La importancia de la Palabra</h3>
+
+                                <p>
+                                    En conclusión,
+                                    si queremos conocer a Dios,
+                                    debemos conocer Su Palabra.
+                                </p>
+
+                                <p>
+                                    Al comprender la Palabra,
+                                    podemos conocer la voluntad de Dios,
+                                    podemos conocer el corazón de Dios
+                                    y podemos conocer el camino que Dios desea para nosotros.
+                                </p>
+
+                                <p>
+                                    Por eso,
+                                    lo más importante en la vida de fe
+                                    es aprender y comprender la Palabra.
+                                </p>
+
+                            </article>
+
+
+                            <h3 class="leccion-subtitulo">¿Qué es la fe según Dios?</h3>
+
+                            <article class="study-card">
+
+                                <p>
+                                    ¿Consideras que tienes fe?
+                                    Entonces,
+                                    ¿qué es la fe según Dios?
+                                </p>
+
+                                <div class="verse-highlight">
+                                    <span>Romanos 10:17</span>
+
+                                    <p>
+                                        Así que la fe es por el oír,
+                                        y el oír, por la palabra de Dios.
+                                    </p>
+                                </div>
+
+                                <p>
+                                    Es decir,
+                                    lo que debemos creer
+                                    no son nuestros pensamientos,
+                                    emociones o experiencias,
+                                    sino la Palabra de Dios.
+                                </p>
+
+                                <p>
+                                    Entonces vale la pena reflexionar.
+                                    Yo he dicho que creo en Dios,
+                                    pero,
+                                    ¿qué es lo que realmente he estado creyendo?
+                                </p>
+
+                                <p>
+                                    Porque conocer y creer la Biblia
+                                    es conocer y creer a Dios.
+                                </p>
+
+                                <p>
+                                    Por eso,
+                                    aprender y comprender la Palabra
+                                    no es una opción para el creyente,
+                                    sino un deber fundamental.
+                                </p>
+
+                            </article>
+
+
+                            <h3 class="leccion-subtitulo">La falta de conocimiento</h3>
+
+                            <article class="study-card">
+
+                                <div class="verse-highlight">
+                                    <span>Oseas 4:6</span>
+
+                                    <p>
+                                        Mi pueblo fue destruido,
+                                        porque le faltó conocimiento.
+                                        Por cuanto desechaste el conocimiento,
+                                        yo te echaré del sacerdocio;
+                                        y porque olvidaste la ley de tu Dios,
+                                        también yo me olvidaré de tus hijos.
+                                    </p>
+                                </div>
+
+                                <p>
+                                    A través de este pasaje,
+                                    comprendí que
+                                    "incluso el pueblo de Dios puede perecer".
+                                    ¿Usted ya lo sabía?
+                                </p>
+
+                                <p>
+                                    En aquel tiempo,
+                                    Israel era la única nación
+                                    que conocía a Dios,
+                                    y era el pueblo escogido
+                                    especialmente por Él.
+                                </p>
+
+                                <p>
+                                    Entonces,
+                                    ¿por qué fue destruido?
+                                    La Biblia dice
+                                    que fue por falta de conocimiento.
+                                    Es decir,
+                                    porque no conocieron la Palabra de Dios
+                                    y quebrantaron Su ley.
+                                </p>
+
+                            </article>
+
+
+                            <article class="study-card">
+
+                                <h3>Una comparación</h3>
+
+                                <p>
+                                    Piénselo.
+                                    Si una persona viola una ley
+                                    y comparece ante un tribunal,
+                                    ¿servirá decir:
+                                    "No lo sabía"?
+                                </p>
+
+                                <p>
+                                    No servirá.
+                                    La ley ya existía,
+                                    y la responsabilidad de no conocerla
+                                    recae sobre la persona.
+                                </p>
+
+                                <p>
+                                    Con Dios ocurre lo mismo.
+                                    Dios ya nos está dando
+                                    la oportunidad de escuchar Su Palabra.
+                                </p>
+
+                                <p>
+                                    Pero si no procuramos conocerla
+                                    y vivimos sin entender Su voluntad,
+                                    podríamos desobedecerla
+                                    sin siquiera darnos cuenta.
+                                </p>
+
+                            </article>
+
+
+                            <article class="study-card final-card">
+
+                                <p>
+                                    Al final,
+                                    incluso siendo pueblo de Dios,
+                                    si se llega al límite de Su paciencia,
+                                    vendrá el juicio.
+                                </p>
+
+                                <p>
+                                    Sin embargo,
+                                    Dios es amor
+                                    y es muy paciente.
+                                    Por eso,
+                                    antes de juzgarnos,
+                                    nos da primero la oportunidad
+                                    de escuchar Su Palabra.
+                                </p>
+
+                                <p>
+                                    Yo deseo que usted también
+                                    aproveche esa oportunidad.
+                                </p>
+
+                            </article>
+
+
+                            <h3 class="leccion-subtitulo">Versículos de referencia</h3>
+
+                            <div class="versiculos-grid">
+
+                                <article class="verse-card">
+                                    <span class="verse-reference">Jn 1:1</span>
+
+                                    <p>
+                                        En el principio era el Verbo,
+                                        y el Verbo era con Dios,
+                                        y el Verbo era Dios.
+                                    </p>
+                                </article>
+
+
+                                <article class="verse-card">
+                                    <span class="verse-reference">Rom 10:17</span>
+
+                                    <p>
+                                        Así que la fe es por el oír,
+                                        y el oír, por la palabra de Dios.
+                                    </p>
+                                </article>
+
+
+                                <article class="verse-card">
+                                    <span class="verse-reference">Os 4:6</span>
+
+                                    <p>
+                                        Mi pueblo fue destruido,
+                                        porque le faltó conocimiento.
+                                        Por cuanto desechaste el conocimiento,
+                                        yo te echaré del sacerdocio;
+                                        y porque olvidaste la ley de tu Dios,
+                                        también yo me olvidaré de tus hijos.
+                                    </p>
+                                </article>
+
+                            </div>
+
+
+                            <!-- FLASHCARDS · LECCIÓN 1 -->
+
+                            <h3 class="leccion-subtitulo">Flashcards de repaso</h3>
+
+                            <div class="flashcard-deck">
+
+                                <span class="flashcard-deck-titulo">Lección 01 · La importancia de la Palabra</span>
+
+                                <p class="flashcard-progress">
+                                    Tarjeta <span id="fcActual-1">1</span> de <span id="fcTotal-1">4</span>
+                                </p>
+
+                                <div class="flashcard" onclick="voltearTarjeta(1)">
+                                    <div class="flashcard-inner" id="flashcardInner-1">
+
+                                        <div class="flashcard-front">
+                                            <span class="flashcard-label">Pregunta</span>
+                                            <p id="fcPregunta-1"></p>
+                                            <span class="flashcard-hint">Toca la tarjeta para ver la respuesta</span>
+                                        </div>
+
+                                        <div class="flashcard-back">
+                                            <span class="flashcard-label">Respuesta</span>
+                                            <p id="fcRespuesta-1"></p>
+                                            <span class="flashcard-hint">Toca la tarjeta para volver</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="flashcard-controls">
+                                    <button class="btn btn-outline-dark" onclick="tarjetaAnterior(1)">← Anterior</button>
+                                    <button class="btn btn-primary" onclick="voltearTarjeta(1)">Voltear</button>
+                                    <button class="btn btn-outline-dark" onclick="tarjetaSiguiente(1)">Siguiente →</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                        LECCIÓN 2
+                    ========================== -->
+
+                    <div class="leccion-item" id="leccion-item-2">
+
+                        <button class="leccion-toggle" onclick="toggleLeccion(2)">
+                            <span class="leccion-numero">Lección 02</span>
+                            <span class="leccion-titulo">El corazón de Dios</span>
+                            <span class="leccion-flecha">▾</span>
+                        </button>
+
+                        <div class="leccion-body" id="leccion-body-2">
+
+                            <h3 class="leccion-subtitulo">La condición del ser humano</h3>
+
+                            <article class="study-card">
+
+                                <p>
+                                    Se dice que el ser humano está sentado
+                                    en tinieblas y en sombra de muerte,
+                                    y que está atado por la aflicción
+                                    y por cadenas.
+                                </p>
+
+                                <p>
+                                    ¿Acaso esta no es la realidad
+                                    de nuestra vida hoy?
+                                </p>
+
+                                <p>
+                                    Por más que nos esforcemos,
+                                    las preocupaciones y el sufrimiento no desaparecen,
+                                    y al final nadie puede evitar la muerte.
+                                </p>
+
+                                <p>
+                                    Sin embargo,
+                                    Dios también nos revela la razón
+                                    por la que las personas
+                                    llegaron a vivir de esta manera.
+                                </p>
+
+                                <p>
+                                    ¿Qué está escrito en el versículo 11?
+                                    Porque se rebelaron contra la Palabra de Dios.
+                                </p>
+
+                                <div class="verse-highlight">
+                                    <span>Salmo 107:10-11</span>
+
+                                    <p>
+                                        Algunos moraban en tinieblas y sombra de muerte,
+                                        aprisionados en aflicción y en hierros,
+                                        por cuanto fueron rebeldes a las palabras de Jehová,
+                                        y aborrecieron el consejo del Altísimo.
+                                    </p>
+                                </div>
+
+                            </article>
+
+
+                            <h3 class="leccion-subtitulo">Examinarnos a nosotros mismos</h3>
+
+                            <article class="study-card">
+
+                                <p>
+                                    Entonces debemos examinarnos a nosotros mismos.
+                                    ¿Realmente conocemos la Palabra de Dios
+                                    y vivimos conforme a ella?
+                                </p>
+
+                                <p>
+                                    La verdad es que,
+                                    si no conocemos plenamente la Palabra,
+                                    tampoco podemos obedecerla.
+                                </p>
+
+                                <p>
+                                    Por eso es tan importante
+                                    aprender y comprender perfectamente
+                                    la Palabra de Dios.
+                                </p>
+
+                                <p>
+                                    Solo cuando conocemos Su Palabra
+                                    podemos entender el camino
+                                    que Él desea para nosotros
+                                    y vivir conforme a Su voluntad.
+                                </p>
+
+                            </article>
+
+
+                            <h3 class="leccion-subtitulo">Dios no desea nuestro sufrimiento</h3>
+
+                            <article class="study-card">
+
+                                <p>
+                                    Entonces,
+                                    ¿acaso era la voluntad de Dios
+                                    que el ser humano viviera
+                                    en medio del sufrimiento y de la muerte?
+                                </p>
+
+                                <p>
+                                    Por supuesto que no.
+                                    Leamos ahora Lamentaciones 3:33.
+                                </p>
+
+                                <p>
+                                    Se nos dice que el Señor no desea de corazón
+                                    que el ser humano viva con sufrimiento y aflicción.
+                                </p>
+
+                                <div class="verse-highlight">
+                                    <span>Lamentaciones 3:33</span>
+
+                                    <p>
+                                        Porque no aflige ni entristece voluntariamente
+                                        a los hijos de los hombres.
+                                    </p>
+                                </div>
+
+                            </article>
+
+
+                            <article class="study-card">
+
+                                <p>
+                                    Durante mucho tiempo pensé
+                                    que el sufrimiento y las preocupaciones
+                                    también eran la voluntad de Dios
+                                    y traté de encontrar su propósito.
+                                </p>
+
+                                <p>
+                                    Pero la Biblia dice claramente
+                                    que ese no es el verdadero deseo de Dios.
+                                </p>
+
+                                <p>
+                                    Entonces podemos hacernos esta pregunta:
+                                    ¿No será que la voluntad de Dios
+                                    es librar al ser humano
+                                    del sufrimiento y la aflicción?
+                                </p>
+
+                            </article>
+
+
+                            <h3 class="leccion-subtitulo">¿Cómo nos libra Dios?</h3>
+
+                            <article class="study-card">
+
+                                <p>
+                                    Leamos ahora el Salmo 107:19-20.
+                                </p>
+
+                                <div class="verse-highlight">
+                                    <span>Salmo 107:19-20</span>
+
+                                    <p>
+                                        Pero clamaron a Jehová en su angustia,
+                                        y los libró de sus aflicciones.
+                                        Envió su palabra, y los sanó,
+                                        y los libró de su ruina.
+                                    </p>
+                                </div>
+
+                                <p>
+                                    Las personas dicen que
+                                    cuando claman a Dios en medio de la angustia,
+                                    Él las libra de su sufrimiento.
+                                </p>
+
+                                <p>
+                                    Pero, ¿cómo las libra?
+                                </p>
+
+                                <div class="quote-list">
+                                    <p>¿Les da una casa de repente si no tienen vivienda?</p>
+                                    <p>¿Les envía comida de manera milagrosa si no tienen qué comer?</p>
+                                    <p>¿O hace caer dinero del cielo si no tienen recursos?</p>
+                                </div>
+
+                                <p>
+                                    La Biblia no dice eso.
+                                    Dios dice que envía Su Palabra para salvarlos.
+                                </p>
+
+                            </article>
+
+
+                            <article class="study-card">
+
+                                <p>
+                                    En el mundo se dice que
+                                    con dinero se puede resolver todo.
+                                    Es cierto que el dinero parece ser
+                                    la solución para muchas cosas,
+                                    pero tener dinero no significa
+                                    necesariamente ser feliz.
+                                </p>
+
+                                <p>
+                                    Al final,
+                                    el problema fundamental de la vida
+                                    no se resuelve con dinero,
+                                    sino con la Palabra de Dios.
+                                </p>
+
+                            </article>
+
+
+                            <h3 class="leccion-subtitulo">Desde Génesis hasta Apocalipsis</h3>
+
+                            <article class="study-card final-card">
+
+                                <p>
+                                    Por lo tanto,
+                                    la única manera de resolver los problemas de nuestra vida
+                                    es conocer correctamente la Biblia,
+                                    que es la Palabra de Dios.
+                                </p>
+
+                                <p>
+                                    Si un teléfono Samsung tiene un problema,
+                                    vamos al centro de servicio de Samsung;
+                                    de la misma manera,
+                                    si nuestra vida no está conforme a la voluntad de Dios
+                                    y tiene problemas,
+                                    debemos ir a Dios, quien nos creó.
+                                </p>
+
+                                <p>
+                                    Si Dios es el Creador,
+                                    entonces la respuesta a la vida
+                                    también está, naturalmente, en Su Palabra.
+                                </p>
+
+                                <p>
+                                    Por lo tanto,
+                                    es necesario que comprendamos correctamente la Biblia
+                                    desde Génesis hasta Apocalipsis.
+                                </p>
+
+                            </article>
+
+
+                            <h3 class="leccion-subtitulo">Versículos de referencia</h3>
+
+                            <div class="versiculos-grid">
+
+                                <article class="verse-card">
+                                    <span class="verse-reference">Sal 107:10-11</span>
+
+                                    <p>
+                                        Algunos moraban en tinieblas y sombra de muerte,
+                                        aprisionados en aflicción y en hierros,
+                                        por cuanto fueron rebeldes a las palabras de Jehová,
+                                        y aborrecieron el consejo del Altísimo.
+                                    </p>
+                                </article>
+
+
+                                <article class="verse-card">
+                                    <span class="verse-reference">Lam 3:33</span>
+
+                                    <p>
+                                        Porque no aflige ni entristece voluntariamente
+                                        a los hijos de los hombres.
+                                    </p>
+                                </article>
+
+
+                                <article class="verse-card">
+                                    <span class="verse-reference">Sal 107:19-20</span>
+
+                                    <p>
+                                        Pero clamaron a Jehová en su angustia,
+                                        y los libró de sus aflicciones.
+                                        Envió su palabra, y los sanó,
+                                        y los libró de su ruina.
+                                    </p>
+                                </article>
+
+                            </div>
+
+
+                            <!-- FLASHCARDS · LECCIÓN 2 -->
+
+                            <h3 class="leccion-subtitulo">Flashcards de repaso</h3>
+
+                            <div class="flashcard-deck">
+
+                                <span class="flashcard-deck-titulo">Lección 02 · El corazón de Dios</span>
+
+                                <p class="flashcard-progress">
+                                    Tarjeta <span id="fcActual-2">1</span> de <span id="fcTotal-2">7</span>
+                                </p>
+
+                                <div class="flashcard" onclick="voltearTarjeta(2)">
+                                    <div class="flashcard-inner" id="flashcardInner-2">
+
+                                        <div class="flashcard-front">
+                                            <span class="flashcard-label">Pregunta</span>
+                                            <p id="fcPregunta-2"></p>
+                                            <span class="flashcard-hint">Toca la tarjeta para ver la respuesta</span>
+                                        </div>
+
+                                        <div class="flashcard-back">
+                                            <span class="flashcard-label">Respuesta</span>
+                                            <p id="fcRespuesta-2"></p>
+                                            <span class="flashcard-hint">Toca la tarjeta para volver</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="flashcard-controls">
+                                    <button class="btn btn-outline-dark" onclick="tarjetaAnterior(2)">← Anterior</button>
+                                    <button class="btn btn-primary" onclick="voltearTarjeta(2)">Voltear</button>
+                                    <button class="btn btn-outline-dark" onclick="tarjetaSiguiente(2)">Siguiente →</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+        BOTÓN VOLVER ARRIBA
+    ========================== -->
+
+    <button
+        id="btnArriba"
+        class="btn-arriba"
+        onclick="volverArriba()"
+        aria-label="Volver arriba"
+    >
+        ↑
+    </button>
+
+
+    <!-- JS -->
+    <script>
+
+        // =========================
+        //  VISTAS
+        // =========================
+
+        function mostrarVista(nombre) {
+            document.querySelectorAll(".vista").forEach((v) => v.classList.remove("activa"));
+            document.getElementById("vista-" + nombre).classList.add("activa");
+
+            document.querySelectorAll(".nav-link").forEach((a) => a.classList.remove("activo"));
+            document.querySelector('.nav-link[data-vista="' + nombre + '"]').classList.add("activo");
+
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+
+        // =========================
+        //  ACORDEÓN DE LECCIONES
+        // =========================
+
+        function toggleLeccion(n) {
+            const item = document.getElementById("leccion-item-" + n);
+            const estabaAbierta = item.classList.contains("abierta");
+
+            document.querySelectorAll(".leccion-item").forEach((it) => it.classList.remove("abierta"));
+
+            if (!estabaAbierta) {
+                item.classList.add("abierta");
+            }
+        }
+
+        function irALeccion(n) {
+            mostrarVista("contenido");
+
+            document.querySelectorAll(".leccion-item").forEach((it) => it.classList.remove("abierta"));
+            document.getElementById("leccion-item-" + n).classList.add("abierta");
+
+            setTimeout(() => {
+                document.getElementById("leccion-item-" + n).scrollIntoView({ behavior: "smooth", block: "start" });
+            }, 100);
+        }
+
+
+        // =========================
+        //  FLASHCARDS (por lección)
+        // =========================
+
+        const mazos = {
+            1: {
+                indice: 0,
+                datos: [
+                    {
+                        pregunta: "¿Cómo podemos conocer a Dios?",
+                        respuesta: "Si queremos conocer a Dios, debemos conocer Su Palabra. Al comprender la Palabra, podemos conocer la voluntad de Dios, podemos conocer el corazón de Dios y podemos conocer el camino que Dios desea para nosotros."
+                    },
+                    {
+                        pregunta: "¿Qué es la fe según Dios?",
+                        respuesta: "La fe viene por el oír, y el oír, por la palabra de Dios. Lo que debemos creer no son nuestros pensamientos, emociones o experiencias, sino la Palabra de Dios."
+                    },
+                    {
+                        pregunta: "¿Por qué fue destruido Israel?",
+                        respuesta: "La Biblia dice que fue por falta de conocimiento. Es decir, porque no conocieron la Palabra de Dios y quebrantaron Su ley."
+                    },
+                    {
+                        pregunta: "¿Qué ocurre si no procuramos conocer la Palabra?",
+                        respuesta: "Podríamos desobedecerla sin siquiera darnos cuenta."
+                    }
+                ]
+            },
+            2: {
+                indice: 0,
+                datos: [
+                    {
+                        pregunta: "¿Qué está escrito en el versículo 11 del Salmo 107?",
+                        respuesta: "Porque se rebelaron contra la Palabra de Dios."
+                    },
+                    {
+                        pregunta: "¿Era la voluntad de Dios que el ser humano viviera en sufrimiento y muerte?",
+                        respuesta: "Por supuesto que no. El Señor no desea de corazón que el ser humano viva con sufrimiento y aflicción (Lamentaciones 3:33)."
+                    },
+                    {
+                        pregunta: "Según el Salmo 107:19-20, ¿qué envía Dios para librarnos de la angustia?",
+                        respuesta: "Envía Su Palabra, y los sanó, y los libró de su ruina."
+                    },
+                    {
+                        pregunta: "¿Con qué se resuelve el problema fundamental de la vida?",
+                        respuesta: "No con dinero, sino con la Palabra de Dios."
+                    },
+                    {
+                        pregunta: "¿Cuál es la única manera de resolver los problemas de nuestra vida?",
+                        respuesta: "Conocer correctamente la Biblia, que es la Palabra de Dios."
+                    },
+                    {
+                        pregunta: "Si un teléfono Samsung tiene un problema vamos al centro de servicio Samsung. ¿A quién debemos ir si nuestra vida tiene problemas?",
+                        respuesta: "Debemos ir a Dios, quien nos creó."
+                    },
+                    {
+                        pregunta: "¿Qué debemos comprender correctamente, y desde dónde hasta dónde?",
+                        respuesta: "La Biblia, desde Génesis hasta Apocalipsis."
+                    }
+                ]
+            }
+        };
+
+        function renderTarjeta(n) {
+            const mazo = mazos[n];
+            const tarjeta = mazo.datos[mazo.indice];
+
+            document.getElementById("fcPregunta-" + n).textContent = tarjeta.pregunta;
+            document.getElementById("fcRespuesta-" + n).textContent = tarjeta.respuesta;
+            document.getElementById("fcActual-" + n).textContent = mazo.indice + 1;
+
+            document.getElementById("flashcardInner-" + n).classList.remove("volteada");
+        }
+
+        function voltearTarjeta(n) {
+            document.getElementById("flashcardInner-" + n).classList.toggle("volteada");
+        }
+
+        function tarjetaSiguiente(n) {
+            const mazo = mazos[n];
+            mazo.indice = (mazo.indice + 1) % mazo.datos.length;
+            renderTarjeta(n);
+        }
+
+        function tarjetaAnterior(n) {
+            const mazo = mazos[n];
+            mazo.indice = (mazo.indice - 1 + mazo.datos.length) % mazo.datos.length;
+            renderTarjeta(n);
+        }
+
+        Object.keys(mazos).forEach((n) => {
+            document.getElementById("fcTotal-" + n).textContent = mazos[n].datos.length;
+            renderTarjeta(n);
+        });
+
+
+        // =========================
+        //  BOTÓN VOLVER ARRIBA
+        // =========================
+
+        const btnArriba = document.getElementById("btnArriba");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 400) {
+                btnArriba.classList.add("visible");
+            } else {
+                btnArriba.classList.remove("visible");
+            }
+        });
+
+        function volverArriba() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+    </script>
+
+</body>
+
+</html>
